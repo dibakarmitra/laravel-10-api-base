@@ -1,41 +1,49 @@
-PrebidAdapter_CampaignAPI
--------------------------
-              
 
-docker-compose up
+# Laravel 10 Api Base
 
-docker exec -it phpdocker-laravel-mongo_php-fpm_1 bash
-
-then execute laravel's or php required command line commands
+A brief description of what this project does and who it's for
 
 
-Laravel end point :
+## Features
 
-  http://localhost:5000/
-
-Mongo endpoint:
-
-  http://localhost:8081/
-
-    admin||pass [better check console]
-
-
-
-all port & config is in
-
-  /docker-compose.yml
-
-  /.env
-
-  /config/*
+- City, State, Country Seeder (more than 150K cities)
+- Custom Api Response
+- Jwt Auth
+- FileUploadService
+- oneToMany relationship sync
+- Set model table from config/dbtables
+- SearchScope, ActiveScope, Ulid (Primary Key)
+- Docker
 
 
+## Environment Variables
 
-if anywhere permission related issue occurs give permission
+To run this project, you will need to add the following environment variables to your .env file
 
-chown :www-data vendor/ storage/ bootstrap/ -R
+`APP_KEY=app key` \
+`JWT_SECRET=jwt key` \
 
-chmod 777 <folder> -R
+`DB_CONNECTION=pgsql` \
+`DB_HOST=localhost`\
+`DB_PORT=5432` \
+`DB_DATABASE=tp_pre` \
+`DB_USERNAME=postgres` \
+`DB_PASSWORD=` \
 
-chmod 777 <file>
 
+## Installation
+
+Install my-project with composer
+
+```bash
+  composer install / update
+  php artisan key:generate // generate app key
+  php artisan jwt:secret // generate jwt key
+  setup .env file
+  php artisan migrate
+  php artisan db:seed
+  php artisan serve
+  // docker
+  docker-compose up
+```
+    
