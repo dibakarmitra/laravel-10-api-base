@@ -33,7 +33,8 @@ To run this project, you will need to add the following environment variables to
 
 ## Installation
 
-Install my-project with composer
+Install my-project with composer\
+Requirment php-8.1 or Heigher, Pgsql 14 or Heigher
 
 ```bash
   composer install / update
